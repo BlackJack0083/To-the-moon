@@ -1,0 +1,446 @@
+/* 这是引入了一些字体 */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap'); 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  /* 当用户手动导航或者 CSSOM scrolling API 触发滚动操作时 */
+  scroll-behavior: smooth; 
+}
+
+.container{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 3.2rem;
+}
+
+/* header部分开始 */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase; /* 大写 */
+  letter-spacing: 2px; /* 字符间距 */
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+  position: relative;
+}
+
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background: #fff;
+  color: #2b1055;
+}
+/* 下拉菜单部分 */
+.dropdown-menu{
+  display: none;
+}
+
+header ul li:hover .dropdown-menu{
+  display: block;
+  left: 0;
+  top: 100%;
+}
+
+header ul li:hover .dropdown-menu ul{
+  display: block;
+  margin: 10px 0px;
+  padding: 3px 0px;
+  position: absolute; /* 添加绝对定位，相对于父元素 */
+  flex-direction: column; /*按列排布*/
+}
+
+header ul li:hover .dropdown-menu ul li{
+  width: 210%;
+  padding: 10px;
+  margin: -7px;
+}
+/* header部分结束 */
+
+/* body部分开始 */
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #1c0522, transparent);
+  z-index: 1000;
+}
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* object-fit CSS 属性指定可替换元素（例如：<img> 或 <video>）的内容应该如何适应到其使用高度和宽度确定的框。 */
+  object-fit: cover;
+  pointer-events: none;
+}
+
+section img#moon {
+  /* mix-blend-mode CSS 属性描述了元素的内容应该与元素的直系父元素的内容和元素的背景如何混合。 */ 
+  mix-blend-mode: screen;
+}
+
+section img#mountains_front {
+  z-index: 10;
+}
+
+#text {
+  position: absolute;
+  right: -350px;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
+}
+
+#btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b1055;
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(100px);
+}
+
+.detail_container{
+  position: relative;
+  z-index: 1;
+  background-color: #000000;
+  padding-bottom: 30px;
+}
+
+.detail_info{
+  margin-left: 40px;
+  margin-bottom: 0px;
+  position: relative;
+  z-index: 1
+}
+
+.detail_info h2 {
+  letter-spacing: 4px;
+  font-family: var(--font-secondary);
+  font-size: 80px;
+  font-weight: 500;
+  text-shadow: -1px 2px 3px #180847;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -3px;
+  color: #fff;
+}
+
+.detail_info h3{
+  color: #ebebeb;
+  text-shadow: -1px 2px 3px #180847;
+  font-size: 36px;
+  margin-left: 4px;
+  letter-spacing: 1.8px;
+  position: relative;
+  z-index: 1;
+}
+
+.detail_info_desc {
+  position: relative;
+  z-index: 1;
+  max-width: 610px;
+  font-size: 14px;
+  text-shadow: -1px 2px 3px #180847;
+  margin-top: 16px;
+  line-height: 1.8;
+  margin-left: 4px;
+}
+
+.detail_info_desc p {
+  font-size: 1em;
+  color: #ece5e5;
+}
+
+.detail_info_desc p:not(:last-child){
+  margin-bottom: 28px;
+}
+
+.detail_image-wrap{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -20%;
+  height: 565px;
+  width: 200%;
+  pointer-events: none;
+}
+
+.detail_image{
+  position: absolute;
+  max-width: none;
+  pointer-events: none;
+}
+
+.detail_image-ttm{
+  width: 1120px;
+  top: 46px;
+  left: 37.6%;
+  height: auto;
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.content-container{
+  color: #777;
+  padding: 4rem 0 9rem 0;
+  max-width: 60rem;
+  margin-top: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.content-container h3{
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #d4d4d4;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 2px;
+  width: 100%;
+}
+
+.detail_comment{
+  width: 40%; /* Adjust the width as needed */
+  box-sizing: border-box;
+}
+
+.detail_comment thead{
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.detail_comment thead .thead-content{
+  /* background-color: #f2f2f2; */
+  font-size: 1.3rem;
+}
+
+.detail_comment tbody{
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.detail_comment tbody tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.detail_comment td{
+  display: table-cell;
+  vertical-align: inherit;
+  font-size: 1.2rem;
+  border: 1px solid #ddd;
+  padding: 1.1rem;
+}
+
+.table_comment_author{
+  color: rgb(255, 255, 255);
+}
+
+.pie-chart {
+  width: 55%; /* Adjust the width as needed */
+  margin-left: 2px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.comment_piechart {
+  max-width: 100%;
+  height: auto;
+}
+
+.pie-figcaption {
+  font-style: italic;
+  font-size: 0.8em;
+  color: #808080;
+  margin-top: 0.5em; /* Adjust margin-top for spacing */
+}
+
+.detail_math {
+  width: 100%;
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap;
+}
+
+.detail_math h3 {
+  width: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 2px;
+}
+
+.detail_math p{
+  width: 100%;
+}
+
+.detail_math span {
+  color: white; 
+}
+/* body部分结束 */
+
+/* footer部分开始 */
+.footer{
+  padding-bottom: 43px ;
+  background-color: #090228;
+  background-image: url("./images/main-bottom.png");
+  background-repeat: no-repeat;
+  background-size: 100% ;
+  background-position:center;
+}
+
+.footer_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer_logo{
+  margin-bottom: 3px;
+} 
+
+.logo_img{
+  width: 113px;
+  height: 90px; 
+  margin-bottom: 3px;
+}
+
+.nav{
+  display: block;
+}
+
+.footer_nav{
+  margin-bottom: 30px;
+}
+
+.nav_list{
+  display: flex;
+  align-items: center;
+}
+
+/* 设置每个栏目之间的间隔 */
+.nav_item + .nav_item {
+  margin-left: 28px;
+}
+
+.nav_link{
+  font-size: 20px;
+  font-weight: 700;
+  /* 设置阴影 */
+  text-shadow: -4px 4px 10px #090228;
+  /* 设置字间距 */
+  letter-spacing: 1.1px;
+  color: #fff;
+}
+
+.social{
+  display: flex;
+}
+
+.social_item + .social_item{
+  margin-left: 8px;
+}
+
+.social_link{
+  width: 27px;
+  display: block;
+  position: relative;
+}
+
+.social_icon{
+  width: 100%;
+}
+
+/* 这部分因为不会还没有学完JS,不会具体实现 */
+.social_icon_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* 添加过渡效果，使悬停效果更平滑 */
+}
+
+.social_icon:hover .social_icon_hover {
+  opacity: 1;
+}
+
+.footer_social{
+  margin-bottom: 10px;
+}
+
+.footer_text{
+  text-align: center;
+  font-size: 10px;
+  text-shadow: -3px 3px 3px #090228;
+  color: white;
+}
+
+/* footer部分结束 */

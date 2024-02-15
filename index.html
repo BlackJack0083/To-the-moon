@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>To the Moon</title>
+  <link rel="icon" href="./images/bnu.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- latex渲染器 -->
+  <script src="mathjax-config.js" defer></script>
+  <script
+    type="text/javascript"
+    async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
+  ></script>
+  <!-- 以下部分使得$ \\ 也可以作为公式的起止符 -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    });
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <a href="https://freebirdgames.com/" class="logo">Freebird Games</a>
+    <ul>
+      <li><a href="https://freebirdgames.com/" class="active">Home</a></li>
+      <li><a href="#">About <i class="fa fa-caret-down" aria-hidden="true"></i></a></i>
+        <div class="dropdown-menu">
+          <ul>
+            <li><a href="https://freebirdgames.com/games/to-the-moon/">To the moon</a></li>
+            <li><a href="https://freebirdgames.com/games/finding-paradise/">Finding Paradise</a></li>
+            <li><a href="https://freebirdgames.com/games/impostor-factory/">Impostor Factory</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+
+  <section>
+    <img src="images/stars.png" id="stars">
+    <img src="images/moon.png" id="moon">
+    <img src="images/mountains_behind.png" id="mountains_behind">
+    <h2 id="text">To the Moon</h2>
+    <a href="#detail_info" id="btn">Explore</a>
+    <img src="images/mountains_front.png" id="mountains_front">
+  </section>
+
+  <div class="detail_container container">
+    <div class="detail_info" id="detail_info">
+      <h2>Introduction</h2>
+      <h3>1st episode of the series</h3>
+      <div class="detail_info_desc" id="detail_info_desc">
+        <p>Dr. Rosalene and Dr. Watts have peculiar jobs: They give people another chance to live, all the way from the very beginning... but only in their patients' heads.</p>
+        
+        <p>Due to the severity of the operation, the new life becomes the last thing the patients remember before drawing their last breath. Thus, the operation is only done to people on their deathbeds, to fulfill what they wish they had done with their lives, but didn’t.</p>
+        
+        <p>This particular story follows their attempt to fulfill the dream of an elderly man, Johnny. With each step back in time, a new fragment of Johnny's past is revealed. As the two doctors piece together the puzzled events that spanned a lifetime, they seek to find out just why the frail old man chose his dying wish to be what it is.</p>
+        
+        <p>
+          And Johnny's last wish is, of course... to go to the moon.
+        </p>
+        
+      </div>
+      <div class="detail_image-wrap">
+        <img src="./images/games-ttm.png" alt role="presentation" class="detail_image detail_image-ttm">
+      </div>
+    </div>
+    <div class="content-container">
+      <h3>Comment</h3>
+      <table class="detail_comment">
+        <thead>
+          <tr>
+            <th class="thead-content">Publication</th>
+            <th class="thead-content">Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="table_comment_author"><i>GamePro</i></td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td class="table_comment_author"><i>GameSpot</i></td>
+            <td>8/10</td>
+          </tr>
+          <tr>
+            <td class="table_comment_author"><i>GamesRadar+</i></td>
+            <td>8/10</td>
+          </tr>
+          <tr>
+            <td class="table_comment_author"><i>IGN</i></td>
+            <td>7.5/10</td>
+          </tr>
+          <tr>
+            <td class="table_comment_author">Nintendo World Report</td>
+            <td>NS:8/10</td>
+          </tr>
+          <tr>
+            <td class="table_comment_author"><i>RPGFan</i></td>
+            <td>90%</td>
+          </tr>
+          <tr>
+            <td class="table_comment_author"><i>TouchArcade</i></td>
+            <td>IOS:4.5</td>
+          </tr>
+        </tbody>
+      </table> 
+      <figure class="pie-chart">
+        <img src="./images/piechart.png" alt="statistic" class="comment_piechart">
+        <figcaption class="pie-figcaption">figure1: Player Favorite Statistics </figcaption>
+      </figure>
+    </div>
+    <div class="detail_math">
+      <h3>Math:</h3>
+      <p>
+        <span class=\"math\">$$f(n) = \begin{cases} n/2, & \text{if $n$ is even} \\ 3n+1, & \text{if $n$ is odd} \end{cases}\\$$</span>
+      </p>
+      <p>
+        <span class=\"math\">$$\frac{d}{dt}\int_{a}^{b}f(x)dx = f(b) - f(a)$$</span>
+      </p>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer_container container">
+      <a href="https://freebirdgames.com/" class="footer_logo">
+        <img src="./images/FreebirdGames.png" alt="presentaion" class="logo_img">
+      </a>
+      <nav class="nav footer_nav">
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="https://freebirdgames.com/about/" class="nav_link">about</a>
+          </li>
+          <li class="nav_item">
+            <a href="https://freebirdgames.com/games/" class="nav_link">games</a>
+          </li>
+          <li class="nav_item">
+            <a href="https://freebirdgames.bigcartel.com/" class="nav_link">store</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="social footer_social">
+        <li class="social_item">
+          <a href="https://discord.gg/rA4rXzC" class="social_link">
+            <img src="./images/ds.png" alt="discord" class="social_icon social_icon_default">
+            <img src="./images/ds-hover.png" alt="" class="social_icon social_icon_hover">
+          </a>
+        </li>
+        <li class="social_item">
+          <a href="https://www.facebook.com/FreebirdGames/" class="social_link">
+            <img src="./images/fb.png" alt="facebook" class="social_icon social_icon_default">
+            <img src="./images/fb-hover.png" alt="" class="social_icon social_icon_hover">
+          </a>
+        </li>
+        <li class="social_item">
+          <a href="https://www.instagram.com/freebird_games/" class="social_link">
+            <img src="./images/inst.png" alt="ins" class="social_icon social_icon_default">
+            <img src="./images/inst-hover.png" alt="" class="social_icon social_icon_hover">
+          </a>
+        </li>
+        <li class="social_item">
+          <a href="https://www.reddit.com/r/freebirdgames/" class="social_link">
+            <img src="./images/rd.png" alt="reddit" class="social_icon social_icon_default">
+            <img src="./images/rd-hover.png" alt="" class="social_icon social_icon_hover">          
+          </a>
+        </li>
+        <li class="social_item">
+          <a href="https://twitter.com/freebird_games" class="social_link">
+            <img src="./images/tw.png" alt="twitter" class="social_icon social_icon_default">
+            <img src="./images/tw-hover.png" alt="" class="social_icon social_icon_hover">
+          </a>
+        </li>
+        <li class="social_item">
+          <a href="https://www.youtube.com/c/KanGao" class="social_link">
+            <img src="./images/yt.png" alt="youtube" class="social_icon social_icon_default">
+            <img src="./images/yt-hover.png" alt="" class="social_icon social_icon_hover"> 
+          </a>
+        </li>
+      </ul>
+      <div class="footer_text">
+        <p>© 2024 Freebird Games. All rights reserved.</p>
+        <p>
+          Legal Disclaimer: By reading this message, you acknowledge that you are awesome in your own way.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let stars = document.getElementById('stars')
+    let moon = document.getElementById('moon')
+    let mountains_behind = document.getElementById('mountains_behind')
+    let text = document.getElementById('text')
+    let btn = document.getElementById('btn')
+    let mountains_front = document.getElementById('mountains_front')
+    let header = document.querySelector('header')
+
+    window.addEventListener('scroll', function(){
+      let value = window.scrollY;
+      stars.style.left = value * 0.25 + 'px'
+      moon.style.top = value * 1.05 + 'px'
+      mountains_behind.style.top = value * 0.5 + 'px'
+      mountains_front.style.top = value * 0 + 'px'
+      text.style.marginRight = value * 4 + 'px'
+      text.style.marginTop = value * 1.5 + 'px'
+      btn.style.marginTop = value * 1.5 + 'px'
+      header.style.top = value * 0.5 + 'px'
+    })
+  </script>
+
+</body>
+</html>
