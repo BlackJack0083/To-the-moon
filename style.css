@@ -419,6 +419,11 @@ section img#mountains_front {
   width: 100%;
 }
 
+.social_icon_default:hover{
+  display: none;
+  opacity: 0;
+}
+
 /* 这部分因为不会还没有学完JS,不会具体实现 */
 .social_icon_hover {
   position: absolute;
@@ -428,7 +433,7 @@ section img#mountains_front {
   transition: opacity 0.3s ease-in-out; /* 添加过渡效果，使悬停效果更平滑 */
 }
 
-.social_icon:hover .social_icon_hover {
+.social_icon_hover:hover {
   opacity: 1;
 }
 
